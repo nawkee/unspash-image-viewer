@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list-screen {
+    max-width: 480px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.list-item {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.list-item:hover {
+    transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-item img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
 }
+
+.list-item h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.list-item p {
+    font-size: 0.9rem;
+    color: #666;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.photo-screen {
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+
